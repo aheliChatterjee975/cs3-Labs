@@ -1,0 +1,7 @@
+                     Infix <=> Postfix
+                     2 - 5 <=> 25-
+                   (2 - 5) <=> 25-
+                   a+b*c^d <=> abcd^*+
+                   a^b*c+d <=> ab^c*d+
+               (a+b)^(8-c) <=> ab+8c-^
+     a+b*(c^d-e)^(f+g*h)-i <=> abcd^e-fgh*+^*+i-

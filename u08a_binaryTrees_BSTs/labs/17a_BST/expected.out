@@ -1,0 +1,187 @@
+    tree.add(90)
+    tree.add(90) <-- shouldn't add!!!
+    tree.add(100)
+    tree.add(80)
+    tree.add(70)
+    tree.add(98)
+    
+    *** Expected tree structure after these additions ***
+    
+                          90              
+                  80                100   
+             70                 98        
+    
+    root-> 90 | 80 100 | 70 null 98 
+    
+    IN ORDER from toString: 70 80 90 98 100 
+                  IN ORDER: 70 80 90 98 100 
+                 PRE ORDER: 90 80 70 100 98 
+                POST ORDER: 70 80 98 100 90 
+             REVERSE ORDER: 100 98 90 80 70 
+    
+    The tree is not full.
+    The tree is not perfect.
+    The tree contains 100!
+    The does not contain 114.
+    
+    Number of nodes is 5
+    Number of leaves is 2
+    Number of levels is 3
+    Tree height is 2
+    The smallest tree node 70
+    The largest tree node 100
+    Tree diameter is 4
+    Sum of all nodes: 438.0
+    
+    tree.add(85)
+    
+    *** Expected tree structure after these additions ***
+    
+                          90              
+                  80                100   
+             70       85        98        
+    
+    root-> 90 | 80 100 | 70 85 98 
+    
+    IN ORDER from toString: 70 80 85 90 98 100 
+                  IN ORDER: 70 80 85 90 98 100 
+                 PRE ORDER: 90 80 70 85 100 98 
+                POST ORDER: 70 85 80 98 100 90 
+             REVERSE ORDER: 100 98 90 85 80 70 
+    
+    The tree is not full.
+    The tree is not perfect.
+    The tree contains 100!
+    The does not contain 114.
+    
+    Number of nodes is 6
+    Number of leaves is 3
+    Number of levels is 3
+    Tree height is 2
+    The smallest tree node 70
+    The largest tree node 100
+    Tree diameter is 4
+    Sum of all nodes: 523.0
+    
+    tree.add(98)
+    tree.add(120)
+    
+    *** Expected tree structure after these additions ***
+    
+                          90                  
+                  80                100       
+             70       85        98       120  
+    
+    root-> 90 | 80 100 | 70 85 98 120 | 
+    
+    IN ORDER from toString: 70 80 85 90 98 100 120 
+                  IN ORDER: 70 80 85 90 98 100 120 
+                 PRE ORDER: 90 80 70 85 100 98 120 
+                POST ORDER: 70 85 80 98 120 100 90 
+             REVERSE ORDER: 120 100 98 90 85 80 70 
+    
+    The tree is full.
+    The tree is perfect.
+    The tree contains 100!
+    The does not contain 114.
+    
+    Number of nodes is 7
+    Number of leaves is 4
+    Number of levels is 3
+    Tree height is 2
+    The smallest tree node 70
+    The largest tree node 120
+    Tree diameter is 4
+    Sum of all nodes: 643.0
+    
+    tree.add(72)
+    tree.add(52)
+    tree.add(30)
+    tree.add(64)
+    tree.add(57)
+    tree.add(91)
+    tree.add(93)
+    tree.add(92)
+    
+    *** Expected tree structure after these additions ***
+    
+                                                                     90                                                                   
+    
+                                   80                                                                 100                                 
+    
+                  70                                85                                98                               120                
+    
+          52              72                <>              <>                91              <>                <>              <>        
+      30      64      <>      <>        <>      <>      <>      <>        <>      93      <>      <>        <>      <>      <>      <>    
+    <>  <>  57  <>  <>  <>  <>  <>    <>  <>  <>  <>  <>  <>  <>  <>    <>  <>  92  <>  <>  <>  <>  <>    <>  <>  <>  <>  <>  <>  <>  <>  
+    
+    root-> 90 | 80 100 | 70 85 98 120 | 52 72 null null 91 null null null | 30 64 null null null null null null null 93 null null null null null null | null null 57 null null null null null null null null null null null null null null null 92 
+    
+    IN ORDER from toString: 30 52 57 64 70 72 80 85 90 91 92 93 98 100 120 
+                  IN ORDER: 30 52 57 64 70 72 80 85 90 91 92 93 98 100 120 
+                 PRE ORDER: 90 80 70 52 30 64 57 72 85 100 98 91 93 92 120 
+                POST ORDER: 30 57 64 52 72 70 85 80 92 93 91 98 120 100 90 
+             REVERSE ORDER: 120 100 98 93 92 91 90 85 80 72 70 64 57 52 30 
+    
+    The tree is not full.
+    The tree is not perfect.
+    The tree contains 100!
+    The does not contain 114.
+    
+    Number of nodes is 15
+    Number of leaves is 6
+    Number of levels is 6
+    Tree height is 5
+    The smallest tree node 30
+    The largest tree node 120
+    Tree diameter is 10
+    Sum of all nodes: 1194.0
+    
+    Level order before removing any nodes - using level order traversal.
+    root-> 90 | 80 100 | 70 85 98 120 | 52 72 null null 91 null null null | 30 64 null null null null null null null 93 null null null null null null | null null 57 null null null null null null null null null null null null null null null 92 
+    
+    Tree after removing 90.
+    root-> 91 | 80 100 | 70 85 98 120 | 52 72 null null 93 null null null | 30 64 null null null null null null 92 null null null null null null null | null null 57 
+    
+    Tree after removing 70.
+    root-> 91 | 80 100 | 72 85 98 120 | 52 null null null 93 null null null | 30 64 null null null null null null 92 null null null null null null null | null null 57 
+    
+    Tree after removing 85.
+    root-> 91 | 80 100 | 72 null 98 120 | 52 null null null 93 null null null | 30 64 null null null null null null 92 null null null null null null null | null null 57 
+    
+    Tree after removing 98.
+    root-> 91 | 80 100 | 72 null 93 120 | 52 null null null 92 null null null | 30 64 null null null null null null null null null null null null null null | null null 57 
+    
+    Tree after removing 80.
+    root-> 91 | 72 100 | 52 null 93 120 | 30 64 null null 92 null null null | null null 57 
+    
+    Tree after removing 120.
+    root-> 91 | 72 100 | 52 null 93 null | 30 64 null null 92 null null null | null null 57 
+    
+    Tree after removing 100.
+    root-> 91 | 72 93 | 52 null 92 null | 30 64 null null null null null null | null null 57 
+    
+    Tree after calling clear: 
+    root-> 
+    
+    IN ORDER from toString: 
+                  IN ORDER: 
+                 PRE ORDER: 
+                POST ORDER: 
+             REVERSE ORDER: 
+    
+    The tree is not full.
+    The tree is perfect.
+    The does not contain 100.
+    The does not contain 114.
+    
+    Number of nodes is 0
+    Number of leaves is 0
+    Number of levels is 0
+    Tree height is -1
+    The tree is empty!
+    Tree diameter is 0
+    Sum of all nodes: 0.0
+    
+    
+    

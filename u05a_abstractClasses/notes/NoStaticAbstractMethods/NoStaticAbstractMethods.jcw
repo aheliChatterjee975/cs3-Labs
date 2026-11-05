@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>NoStaticAbstractMethods</label>
+	</settings>
+	<users>
+		<user>
+			<path>NoStaticAbstractMethods.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>NoStaticAbstractMethods.jcp</path>
+		</project>
+	</projects>
+</workspace>

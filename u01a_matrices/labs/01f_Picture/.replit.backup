@@ -1,0 +1,5 @@
+# PictureLab
+# Main method is in the PictureTester file.
+
+language = "java10"
+run = "/bin/sh .go.sh"

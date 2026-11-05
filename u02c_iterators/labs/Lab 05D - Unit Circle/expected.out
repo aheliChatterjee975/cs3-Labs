@@ -1,0 +1,61 @@
+    The Unit Circle:
+    degrees =   0, radians =      0, (         1,          0), tangent =          0
+    degrees =  30, radians =   pi/6, ( sqrt(3)/2,        1/2), tangent =  sqrt(3)/3
+    degrees =  45, radians =   pi/4, ( sqrt(2)/2,  sqrt(2)/2), tangent =          1
+    degrees =  60, radians =   pi/3, (       1/2,  sqrt(3)/2), tangent =    sqrt(3)
+    degrees =  90, radians =   pi/2, (         0,          1), tangent =  undefined
+    degrees = 120, radians =  2pi/3, (      -1/2,  sqrt(3)/2), tangent =   -sqrt(3)
+    degrees = 135, radians =  3pi/4, (-sqrt(2)/2,  sqrt(2)/2), tangent =         -1
+    degrees = 150, radians =  5pi/6, (-sqrt(3)/2,        1/2), tangent = -sqrt(3)/3
+    degrees = 180, radians =     pi, (        -1,          0), tangent =          0
+    degrees = 210, radians =  7pi/6, (-sqrt(3)/2,       -1/2), tangent =  sqrt(3)/3
+    degrees = 225, radians =  5pi/4, (-sqrt(2)/2, -sqrt(2)/2), tangent =          1
+    degrees = 240, radians =  4pi/3, (      -1/2, -sqrt(3)/2), tangent =    sqrt(3)
+    degrees = 270, radians =  3pi/2, (         0,         -1), tangent =  undefined
+    degrees = 300, radians =  5pi/3, (       1/2, -sqrt(3)/2), tangent =   -sqrt(3)
+    degrees = 315, radians =  7pi/4, ( sqrt(2)/2, -sqrt(2)/2), tangent =         -1
+    degrees = 330, radians = 11pi/6, ( sqrt(3)/2,       -1/2), tangent = -sqrt(3)/3
+    degrees = 360, radians =    2pi, (         1,          0), tangent =          0
+       
+    
+    Test Quadrantal Angles:
+    Quadrantal angles in degrees: 0, 90, 180, 270, 360
+    Quadrantal angles in radians: 0, pi/2, pi, 3pi/2, 2pi
+    
+    
+    Test Coterminal Angles:
+    90 is coterminal with 810? true
+    90 is coterminal with 710? false
+    -10 is coterminal with 710? true
+    Find angle in [0, 360) coterminal with 710: 350
+    Find angle in [0, 360) coterminal with -10: 350
+    Find angle in [0, 2pi) coterminal with 12pi: 0
+    Find angle in [0, 2pi) coterminal with -3*pi/4: 5pi/4
+    
+    
+    Test Reference Angles:
+    The reference angle for 70 degrees is: 70
+    The reference angle for 170 degrees is: 10
+    The reference angle for 230 degrees is: 50
+    The reference angle for 328 degrees is: 32
+    The reference angle for -3pi/4 is: pi/4
+    The reference angle for 5pi/6 degrees is: pi/6
+    
+    
+    Test Trig Functions:
+    cos(-120) = -1/2
+    sin(120) = sqrt(3)/2
+    tan(495) = -1
+    cos(pi/2) = 0
+    sin(-7pi/6) = 1/2
+    tan(9pi/4) = 1
+    
+    
+    Test Trig Functions:
+    cos(-120) = -cos(60)
+    sin(120) = sin(60)
+    tan(495) = -tan(45)
+    cos(-pi/4) = cos(pi/4)
+    cos(3pi/2) = cos(pi/2)
+    sin(-5pi/6) = -sin(pi/6)
+    tan(9pi/4) = tan(pi/4)
