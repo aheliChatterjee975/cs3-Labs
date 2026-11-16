@@ -1,9 +1,3 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -11,21 +5,35 @@ import static java.lang.System.*;
 
 public class Lab08b
 {
-	public static void main( String args[] ) throws IOException
-	{
-		Scanner file = new Scanner(new File("dictionary.dat"));
+    public static void main(String args[]) throws IOException
+    {
+        Scanner file = new Scanner(new File("dictionary.dat"));
 
-		SpanishToEnglish test = new SpanishToEnglish();
+        SpanishToEnglish test = new SpanishToEnglish();
 
-		//read in pairs from the file and load the map
+        // read in pairs from the file and load the map
+        while(file.hasNextLine())
+        {
+            test.putEntry(file.nextLine());
+        }
 
-		out.println("\n====\tMAP CONTENTS\t====\n\n");
+        out.println("\n====\tMAP CONTENTS\t====\n\n");
 
-		//print the map
+        // print the map
+        out.println(test + "\n\n");
 
-		out.println(test+"\n\n");
+        // read in the lines and convert them
+        Scanner keyboard = new Scanner(System.in);
 
-		//read in the lines and convert them
+        while(keyboard.hasNextLine())
+        {
+            String line = keyboard.nextLine();
 
-	}
+            if(line.length() > 0)
+            {
+                out.println(test.translate(line));
+            }
+        }
+    }
 }
+

@@ -1,49 +1,49 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.Scanner;
 
 public class SpanishToEnglish
 {
-	private Map<String,String> pairs;
+    private Map<String,String> pairs;
 
-	public SpanishToEnglish()
-	{
+    public SpanishToEnglish()
+    {
+        pairs = new TreeMap<String,String>();
+    }
 
+    public void putEntry(String entry)
+    {
+        String[] list = entry.split(" ");
 
+        pairs.put(list[0], list[1]);
+    }
 
-	}
+    public String translate(String sent)
+    {
+        Scanner chop = new Scanner(sent);
+        String output = "";
 
-	public void putEntry(String entry)
-	{
-		String[] list = entry.split(" ");
+        while(chop.hasNext())
+        {
+            String word = chop.next();
 
+            if(pairs.containsKey(word))
+            {
+                output += pairs.get(word) + " ";
+            }
+            else
+            {
+                output += word + " ";
+            }
+        }
 
+        return output.trim();
+    }
 
-
-
-	}
-
-	public String translate(String sent)
-	{
-		Scanner chop = new Scanner(sent);
-		String output ="";
-
-
-
-
-
-
-		return output;
-	}
-
-	public String toString()
-	{
-		return pairs.toString().replaceAll("\\,","\n");
-	}
+    public String toString()
+    {
+        return pairs.toString().replaceAll("\\,","\n");
+    }
 }
+
+

@@ -1,9 +1,3 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -17,8 +11,7 @@ public class PartList
 	
 	public PartList()
 	{
-
-
+		partsMap = new TreeMap<Part, Integer>();
 	}
 	
 	public PartList(String fileName)
@@ -26,15 +19,23 @@ public class PartList
 		this();
 		try
 		{
-			Scanner file = new Scanner(new File("lab08d.dat"));
-			//add code here to read from the file 
-			//and add Parts to the map
-
-
-
-
+			Scanner file = new Scanner(new File(fileName));
+			while (file.hasNextLine())
+			{
+				String line = file.nextLine().trim();
+				if (!line.isEmpty()) 
+				{
+					Part p = new Part(line);
+					if (partsMap.containsKey(p)) {
+						partsMap.put(p, partsMap.get(p) + 1);
+					} else {
+						partsMap.put(p, 1);
+					}
+				}
+			}
+			file.close();
 		}
-		catch( IOException e )  //Most specific exceptions must be listed 1st
+		catch( IOException e ) 
 		{
 			out.println(e);
 		}
@@ -48,17 +49,17 @@ public class PartList
 		}
 		finally
 		{
-			//no code needed here
+			
 		}
 	}
 	
 	public String toString()
 	{
-		String output="";
-
-
-
-
+		String output = "";
+		for (Map.Entry<Part, Integer> entry : partsMap.entrySet())
+		{
+			output += entry.getKey() + " - " + entry.getValue() + "\n";
+		}
 		return output;
 	}
 }
