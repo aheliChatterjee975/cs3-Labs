@@ -1,36 +1,62 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import java.util.Stack;
 import static java.lang.System.*;
 
 public class SyntaxChecker
 {
-	private String exp;
+    private String exp;
 
-	public SyntaxChecker()
-	{
-	}
+    public SyntaxChecker()
+    {
+        exp = "";
+    }
 
-	public SyntaxChecker(String s)
-	{
-	}
-	
-	public void setExpression(String s)
-	{
-	}
+    public SyntaxChecker(String s)
+    {
+        setExpression(s);
+    }
 
-	public boolean checkExpression()
-	{
-      //You can change this to a stack of Strings if you prefer.
-   	Stack<Character> symbols;     
-   
-   
-		return false;
-	}
+    public void setExpression(String s)
+    {
+        exp = s;
+    }
 
-	//write a toString method
+    public boolean checkExpression()
+    {
+        Stack<Character> symbols = new Stack<Character>();
+
+        for(int i = 0; i < exp.length(); i++)
+        {
+            char ch = exp.charAt(i);
+
+            if(ch == '(' || ch == '[' || ch == '{' || ch == '<')
+            {
+                symbols.push(ch);
+            }
+
+            else if(ch == ')' || ch == ']' || ch == '}' || ch == '>')
+            {
+                if(symbols.isEmpty())
+                {
+                    return false;
+                }
+
+                char open = symbols.pop();
+
+                if((ch == ')' && open != '(') ||
+                   (ch == ']' && open != '[') ||
+                   (ch == '}' && open != '{') ||
+                   (ch == '>' && open != '<'))
+                {
+                    return false;
+                }
+            }
+        }
+
+        return symbols.isEmpty();
+    }
+
+    public String toString()
+    {
+        return exp;
+    }
 }
